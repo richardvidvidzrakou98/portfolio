@@ -12,12 +12,11 @@
     
     <div class="container">
         <div class="close-popups">x</div>
-
         <header>
             <br>
             <img src="1.jpg" alt="Your Name">
             <h1 style="color: rgb(112, 112, 148);">Richard Vidzrakou</h1>
-            <h1 style="letter-spacing: 0.3rem;">Software Developer</h1>
+            <h1 style="letter-spacing: 0.1rem;">Software Developer</h1>
 
             <div class="contact-info">
                 <p>React, jQuery, Bootstrap, PHP, HTML, CSS, WordPress, Git & Github </p>
@@ -27,14 +26,14 @@
                 <a href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/" style="color: black;"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
                 <a href="https://x.com/RVidzrakou?t=vg6sjlruB6Z9yVmOOnoYyA&s=09" style="color: black;"><i style="font-size:24px" class="fa">&#xf099;</i></a>
             </nav>
-            
         </header>
         <div class="buttons">
             <button id="read-me" onclick="openMyWorksPopup()">Read Me</button>
             <button onclick="showPopup()">Hire Me</button>
         </div>
+        <br><br>
         <div class="popup" id="hirePopup">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <span style="font-size: 17px;" class="close-btn" onclick="closePopup()">&times;</span>
             <h2>Contact Information</h2>
             <div class="info" style="text-align: left; padding-left: 10px; border: 1px solid black;">
                 <i class="fa fa-home" style="font-size:24px; padding-left: 6px;"></i>Sunyani, Fiapre<br>
@@ -95,6 +94,9 @@
 
 
     <div class="popups" id="myWorksPopup">
+        <!-- <div class="top">
+            <div class="close-popups" style="font-size: 27px;">x</div>
+        </div> -->
         
         <header>
             <!-- Header content for the popup -->
@@ -114,7 +116,7 @@
         <section class="works-section">
 
             <!-- Project Showcase Section -->
-            <div class="project" style="background-color: #f8f8f8;">
+            <div class="project" id="projects" >
                 <h2 style="color: orange;">Project Showcase</h2>
                 <div class="project">
                     <h3>Admin Dashboard - <span style="color: green; font-size: 14px;">In progress...</span></h3>
@@ -192,7 +194,7 @@
 
 
 
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("myWorksPopup");
     const closeButton = document.querySelector(".close-popups");
 

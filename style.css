@@ -246,7 +246,7 @@ button:hover {
     padding-top: 60px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1001;
     text-align: center;
     border-radius: 5px;
     border-top-right-radius: 5px;
@@ -564,6 +564,7 @@ button:hover {
         height: 180vh;
     }
     .popups header p {
+        width: 100%;
         text-align: left;
     }
 }
@@ -577,3 +578,125 @@ button:hover {
     }
 }
 /* Add these styles to your existing CSS */
+
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 600px) {
+
+    .container .close-popups {
+        left: 95%;
+    }
+
+    /* Adjust other styles for smaller screens */
+    .container header {
+        padding: 10px;
+    }
+
+    .container .buttons button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* Adjust styles for even smaller screens */
+    .container header{
+        height: 80vh;
+        margin: 0;
+    }
+    body{
+        overflow: hidden;
+        padding-top: 0px;
+    }
+    .container .buttons{
+        /* margin-top: 10%; */
+    }
+    .container{
+        /* background-color: black; */
+        width: 100%;
+        height: 100vh;
+        padding: 0px;
+    }
+    .container .close-popups {
+        left: 85%;
+    }
+
+    .container nav a {
+        font-size: 20px;
+    }
+
+    .container .close-popups {
+        z-index: 2000;
+        color: black;
+        left: 90%;
+        top: 3%;
+    }
+
+    .container .popup {
+        width: 100%;
+        margin-top: 5%;
+    }
+    
+}
+
+@media only screen and (max-width: 400px){
+    .popups{
+        /* background-color: #272a32; */
+        width: 100%;
+    }
+    .popups header p{
+        padding-left: -10%;
+        margin-left: 0px;
+    }
+
+
+    .popups header{
+        margin-left: -5%;
+        margin-right: -5%;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+    }
+
+    .popups .works-section{
+        width: 94vw;
+        margin-left: -10%;
+        /* background-color: #272a32; */
+    }
+    .popups .works-section #projects{
+        background-color: #272a32;
+        width: 93vw;
+        margin-left: -9%;
+        margin-right: -9%;
+    }
+    .popups .works-section #project{
+        background-color: #9c5858;
+    }
+    
+    body{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .popups header{
+        z-index: 1;
+    }
+    .container .popups{
+        background-color: #272a32;
+        color: black;
+        z-index: 1002;
+    }
+    
+    /* .popups .top{
+        display: block;
+        background-color: #3b3f49;
+        border-radius: 5px;
+        position: fixed;
+
+    }
+    .popups .top .close-popups{
+    } */
+}
