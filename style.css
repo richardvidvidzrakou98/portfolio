@@ -1,0 +1,579 @@
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(239, 236, 236);
+}
+
+.container {
+    height: 82vh;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 10%;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    height: 66vh;
+    text-align: center;
+    font-family: Arial Verdana Helvetica;
+    font-size: 17px;
+    font-weight: 520;
+    padding-left: 40px;
+    background-color: #f8f8f8;
+    color: #272a32;
+}
+.project p{
+    font-weight: 520;
+    color: #272a32;
+}
+img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+nav {
+    margin-top: 20px;
+    
+}
+
+nav a {
+    margin: 0 5px;
+}
+
+/* .project{
+    background-color:#f8f8f8;
+} */
+.contact-info {
+    margin-top: 20px;
+}
+
+.buttons {
+    height: 50px;
+    padding-top: 5px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 2px;
+    /* background-color: rgb(165, 165, 165); */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.8s ease, color 0.8s ease;
+
+}
+
+button:hover {
+    background-color: #272a32;
+    color: white;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 70vw;
+    /* max-width: 400px; */
+    animation: slideIn 0.8s forwards ease-in-out; /* Use "forwards" to keep the final state */
+}
+
+
+
+.popup {
+    width: 80%;
+    height: 96vh;
+    background-color: rgb(228, 224, 232);
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+.popup .forms {
+    width: 50vw;
+    height: 70vh;
+    margin-top: 80px;
+    display: grid;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+
+@media only screen and (max-width: 530px){
+    .popup {
+        height: 100vh;
+    }
+    .popup .forms{
+        width: 100%;
+       
+    }
+    .popup input,
+.popup textarea{
+    width: 100%;
+
+}
+
+}
+
+.popup label {
+    font-weight: bold;
+}
+
+.popup input,
+.popup textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup button {
+    background-color: #54779b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #272a32;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* Media Queries for Mobile Responsive Design */
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        margin-top: 10px;
+    }
+
+    .buttons {
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+
+}
+
+
+.popups {
+    display: none;
+    width: 85%;
+    height: 87%;
+    position: fixed;
+    top: 49%;
+    bottom: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding-top: 60px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    border-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 800px;
+    overflow: auto; /* Add overflow to make the content scroll */
+    animation: slideIn 0.8s forwards ease-in-out; /* Use "forwards" to keep the final state */
+}
+
+
+
+.container .close-popups{
+    display: block;
+    font-size: 25px;
+    position: fixed;
+    left: 94%;
+    top: 8%;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add opacity transition */
+    opacity: 0; /* Initially set to transparent */}
+
+.close-popups:hover {
+    color: #e74c3c; /* Change color on hover */
+}
+.popups header {
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    to {
+        left: 200%;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        left: 50%;
+    }
+}
+
+.popups header {
+    height: 90vh;
+}
+.popups header h1 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.popups header p {
+    margin-bottom: 20px;
+    color: rgb(116, 116, 116);
+    font-weight: 500;
+    margin-left: 40px;
+    margin-right: 40px;
+    overflow-wrap: break-word; /* Prevent text overflow on small screens */
+}
+
+.popups nav {
+    margin-top: 20px;
+}
+
+.popups nav a {
+    margin: 10px;
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.popups section {
+    padding: 20px;
+}
+.popups .works-section {
+    padding: 20px;
+}
+.popups .works-section h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+.popups .project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.popups .project h3 {
+    color: #333;
+    font-size: 1.2em; /* Adjust font size for better readability on small screens */
+}
+
+.popups .project p {
+    margin-bottom: 10px;
+    font-size: 14px; /* Adjust font size for better readability on small screens */
+}
+
+.popups .project a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.popups .download-cv {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.popups .download-cv button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.popups .download-cv button:hover {
+    background-color: #2980b9;
+}
+
+.popups .contact-me a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add responsive styles using media queries */
+@media only screen and (max-width: 597px) {
+    .popups {
+        width: 85%;
+    }
+    
+    /* .container .close-popups {
+        z-index: 1000;
+    } */
+
+    .container .close-popups {
+        position: fixed;
+        left: 99%;
+    }
+    .container .close-popups{
+        display: block;
+        font-size: 25px;
+        position: fixed;
+        left: 120%;
+        top: 8%;
+    }
+    .popups header h1 {
+        font-size: 1.2em;
+    }
+
+    .popups header p {
+        font-size: 14px;
+    }
+
+    .popups nav a {
+        font-size: 16px;
+    }
+
+    .popups .project h3 {
+        font-size: 18px;
+    }
+
+    .popups .project p {
+        font-size: 12px;
+    }
+
+    .popups .download-cv h2 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 529px) {
+    .popups header {
+        height: 80vh;
+    }
+    .popups header p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .popups nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .popups .project h3 {
+        font-size: 16px;
+    }
+
+    .popups .project p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 452px){
+    .popups header {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 393px){
+    .popups header {
+        height: 110vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 388px){
+    .container{
+        height: 90vh;
+    }
+    .container header{
+        height: 80vh;
+
+    }
+    .popups{
+        height: 100vh;
+    }
+}
+
+
+@media only screen and (max-width: 331px){
+    .popups header {
+        height: 130vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    .popups header {
+        height: 150vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+    
+}
+
+@media only screen and (max-width: 250px){
+    .popups header {
+        height: 170vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        padding-right: 1px;
+    }
+    .container .close-popups {
+        color: green;
+        margin-right: -20%;
+        /* float: right; */
+        position: absolute;
+        left: 94%; 
+    }
+}
+
+@media only screen and (max-width: 890px){
+    .popups header {
+        height: 120vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+   .popups{
+    margin-right: 20%;
+   }
+}
+
+@media only screen and (max-width: 550px){
+    .popups header {
+        height: 150vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 451px){
+    .popups header {
+        height: 160vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 426px){
+    .popups header {
+        height: 180vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 392px){
+    .popups header {
+        height: 200vh;
+    }
+    .popups header p {
+        text-align: left;
+    }
+}
+/* Add these styles to your existing CSS */
