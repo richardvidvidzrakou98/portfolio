@@ -654,19 +654,20 @@ button:hover {
     .popups header{
         margin-left: -5%;
         margin-right: -5%;
+        height: 126vh;
         /* padding-left: 10px;
         padding-right: 10px; */
     }
 
     .popups .works-section{
-        width: 94vw;
+        width: 90vw;
         margin-left: -10%;
         /* background-color: #272a32; */
     }
     .popups .works-section #projects{
         background-color: #272a32;
-        width: 93vw;
-        margin-left: -9%;
+        width: 99vw;
+        margin-left: -5%;
         margin-right: -9%;
     }
     .popups .works-section #project{
