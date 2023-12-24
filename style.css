@@ -477,7 +477,7 @@ button:hover {
         height: 90vh;
     }
     .container header{
-        height: 80vh;
+        height: 60vh;
 
     }
     .popups{
@@ -621,7 +621,9 @@ button:hover {
     .container .close-popups {
         left: 85%;
     }
-
+    .container header{
+        height: 70vh;
+    }
     .container nav a {
         font-size: 20px;
     }
@@ -640,7 +642,7 @@ button:hover {
     
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 470px){
     .popups{
         /* background-color: #272a32; */
         width: 100%;
@@ -654,7 +656,7 @@ button:hover {
     .popups header{
         margin-left: -5%;
         margin-right: -5%;
-        height: 126vh;
+        height: 100vh;
         /* padding-left: 10px;
         padding-right: 10px; */
     }
@@ -666,7 +668,7 @@ button:hover {
     }
     .popups .works-section #projects{
         background-color: #272a32;
-        width: 99vw;
+        width: 105vw;
         margin-left: -5%;
         margin-right: -9%;
     }
@@ -701,3 +703,23 @@ button:hover {
     .popups .top .close-popups{
     } */
 }
+
+span.wave {
+    font-size: 40px;
+    padding-right: 20px;
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate(  0.0deg); }
+     10% { transform: rotate(-10.0deg); }
+     20% { transform: rotate( 12.0deg); }
+     30% { transform: rotate(-10.0deg); }
+     40% { transform: rotate(  9.0deg); }
+     50% { transform: rotate(  0.0deg); }
+    100% { transform: rotate(  0.0deg); }
+  }
