@@ -112,9 +112,7 @@ button:hover {
     margin: 20px auto;
 }
 
-.popup .forms .mb-3{
-    margin-top: -2%;
-}
+/* m */
 
 
 @media only screen and (max-width: 530px){
@@ -465,6 +463,7 @@ button:hover {
         height: 90vh;
     }
 }
+
 
 @media only screen and (max-width: 393px){
     .popups header {
