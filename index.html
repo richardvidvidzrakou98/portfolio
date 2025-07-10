@@ -1,148 +1,887 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Vidzrakou - Software Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="Richard Vidzrakou.jpg" alt="Richard Vidzrakou" class="profile-img">
-                <h1>Richard Vidzrakou</h1>
-                <p class="tagline">Software Developer | Web & Mobile Apps | Tech Innovator</p>
-                <div class="social-links">
-                    <a href="https://github.com/richardvidvidzrakou98" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/RichardVid36291" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div class="cta-buttons">
-                    <button class="btn-hire" onclick="showPopup()">Contact Me</button>
-                    <button class="btn-read" onclick="openMyWorksPopup()">Read Me</button>
-                    <a href="blog.html" class="btn-blog">My Blog</a>
-                </div>
-                <a href="#about" class="scroll-down">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Vidzrakou - Senior Software Developer</title>
+    <meta
+      name="description"
+      content="Richard Vidzrakou - Senior Software Developer specializing in React, Flutter, and full-stack development. View my portfolio and professional projects."
+    />
+    <meta
+      name="keywords"
+      content="Richard Vidzrakou, Software Developer, React, Flutter, Full Stack Developer, Portfolio"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+
+    <!-- Custom JavaScript (Config first) -->
+    <script src="./js/config.js"></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">
+            <span class="logo-text">RV</span>
+          </a>
         </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#templates" class="nav-link">Templates</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/presentations.html" class="nav-link"
+              >Presentations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button class="theme-toggle" id="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-particles"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+          <div class="hero-image">
+            <img
+              src="Richard Vidzrakou.jpg"
+              alt="Richard Vidzrakou"
+              class="profile-img"
+            />
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for work</span>
+            </div>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Richard Vidzrakou</span>
+          </h1>
+          <p class="hero-subtitle">Senior Software Developer</p>
+          <p class="hero-description">
+            Crafting exceptional digital experiences with React, Flutter, and
+            modern web technologies. Specializing in full-stack development and
+            innovative solutions.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+            <a href="./my_cv.pdf" target="_blank" class="btn btn-secondary">
+              <i class="fas fa-download"></i>
+              Download CV
+            </a>
+            <button class="btn btn-outline" onclick="openModal('about-modal')">
+              <i class="fas fa-user"></i>
+              Learn More
+            </button>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://github.com/richardvidvidzrakou98"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://x.com/RichardVid36291"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="./pages/blog.html" target="_blank" aria-label="Blog">
+              <i class="fas fa-blog"></i>
+            </a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <a href="#about" class="scroll-down">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>A seasoned software engineer with expertise in React, Flutter, WordPress, and JavaScript. I specialize in building innovative solutions and collaborating on diverse projects. Currently pursuing a BSc in Information Technology at the University of Energy and Natural Resources, I am passionate about staying at the forefront of technology.</p>
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
         </div>
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <p class="about-description">
+              I'm a passionate software engineer with expertise in React,
+              Flutter, WordPress, and JavaScript. With over 5 years of
+              experience, I specialize in building innovative solutions and
+              collaborating on diverse projects that make a real impact.
+            </p>
+            <p class="about-description">
+              Currently pursuing a BSc in Information Technology at the
+              University of Energy and Natural Resources, I am committed to
+              staying at the forefront of technology. My passion lies in
+              creating scalable, user-friendly applications and leveraging the
+              latest technologies to solve real-world problems.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>BSc Information Technology</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Accra, Ghana</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-code"></i>
+                <span>Full-Stack Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image" data-aos="fade-left">
+            <div class="image-container">
+              <img
+                src="./images/software_development_image.jpg"
+                alt="About Richard"
+              />
+              <div class="image-overlay">
+                <div class="experience-badge">
+                  <span class="experience-years">5+</span>
+                  <span class="experience-text">Years of Experience</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <div class="container">
-            <h2>Technology Stack</h2>
-            <div class="skills-grid">
-                <div class="skill">React</div>
-                <div class="skill">Flutter</div>
-                <div class="skill">WordPress</div>
-                <div class="skill">HTML/CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">PHP</div>
-                <div class="skill">Firebase</div>
-                <div class="skill">MySQL</div>
-                <div class="skill">Node</div>
-                <div class="skill">Git & GitHub</div>
-            </div>
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">What I'm good at</span>
+          <h2 class="section-title">Technology Stack</h2>
         </div>
+        <div class="skills-content">
+          <div class="skills-categories">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+              <div class="category-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Frontend Development</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">React</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">JavaScript</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">HTML/CSS</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="95%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+              <div class="category-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Mobile Development</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">Flutter</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="88%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">React Native</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+              <div class="category-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Backend Development</h3>
+              <div class="skills-list">
+                <div class="skill-item">
+                  <span class="skill-name">Node.js</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">PHP</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">MySQL</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-width="82%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+              <div class="category-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Tools & Technologies</h3>
+              <div class="tech-stack">
+                <div class="tech-item">Firebase</div>
+                <div class="tech-item">Git & GitHub</div>
+                <div class="tech-item">WordPress</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">Figma</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="./images/PI_Dashbord1.png" alt="Private Investigators Dashboard">
-                    <h3>PI Management Dashboard</h3>
-                    <p>A management system and dashboard for managing PIs. Built with HTML/CSS, JavaScript, PHP and MySQL</p>
-                    <a href="https://doyeninstitute.edu.gh/verify/admin/login.php" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="./images/DoyenApp.png" height="250px" alt="Doyen Institute App">
-                    <h3>Doyen Institute App</h3>
-                    <p>A multifunctional Flutter app for security professionals and students.</p>
-                </div>
-                <div class="project-card">
-                    <img src="./images/iPad-Air-4-globaleesolutions.com.png" alt="Globalee Solutions Website">
-                    <h3>Globalee Solutions Website</h3>
-                    <p>A professional WordPress website for real estate services.</p>
-                    <a href="https://globaleesolutions.com/" target="_blank">View Project</a>
-                </div>
-            </div>
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">My work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">
+            Here are some of my recent projects that showcase my skills and
+            experience
+          </p>
         </div>
+        <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        </div>
+        <div class="projects-grid">
+          <div
+            class="project-card featured"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-image">
+              <img
+                src="./images/PI_Dashbord1.png"
+                alt="PI Management Dashboard"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://doyeninstitute.edu.gh/verify/admin/login.php"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('pi-dashboard')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Web Application</span>
+                <span class="project-status featured-project">Featured</span>
+              </div>
+              <h3 class="project-title">PI Management Dashboard</h3>
+              <p class="project-description">
+                A comprehensive management system and dashboard for managing
+                Private Investigators with advanced analytics and reporting
+                features.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-category="mobile"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-image">
+              <img src="./images/DoyenApp.png" alt="Doyen Institute App" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('doyen-app')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Mobile App</span>
+                <span class="project-status">Mobile Development</span>
+              </div>
+              <h3 class="project-title">Doyen Institute App</h3>
+              <p class="project-description">
+                A comprehensive Flutter application for security professionals
+                and students with course management, certification tracking, and
+                interactive learning modules.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">REST API</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-category="wordpress"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-image">
+              <img
+                src="./images/iPad-Air-4-globaleesolutions.com.png"
+                alt="Globalee Solutions Website"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://globaleesolutions.com/"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('globalee-solutions')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">WordPress</span>
+                <span class="project-status">Live Project</span>
+              </div>
+              <h3 class="project-title">Globalee Solutions Website</h3>
+              <p class="project-description">
+                Professional WordPress website for real estate services
+                featuring property listings, advanced search functionality, and
+                client management system.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional New Projects -->
+          <div
+            class="project-card"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="project-image">
+              <img
+                src="./images/portfolio-preview.jpg"
+                alt="Portfolio Website"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('portfolio-website')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Web Application</span>
+                <span class="project-status">Personal Project</span>
+              </div>
+              <h3 class="project-title">Professional Portfolio</h3>
+              <p class="project-description">
+                Modern, responsive portfolio website with dynamic content
+                management, project showcase, and integrated blog functionality.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-category="web"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="project-image">
+              <img
+                src="./images/ecommerce-dashboard.jpg"
+                alt="E-commerce Platform"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('ecommerce-platform')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Web Application</span>
+                <span class="project-status">In Development</span>
+              </div>
+              <h3 class="project-title">E-commerce Platform</h3>
+              <p class="project-description">
+                Full-stack e-commerce solution with React frontend, Node.js
+                backend, payment integration, and comprehensive admin dashboard.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Stripe API</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-category="mobile"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            <div class="project-image">
+              <img src="./images/task-manager-app.jpg" alt="Task Manager App" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <button
+                    class="project-link"
+                    onclick="openProjectModal('task-manager')"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-category">Mobile App</span>
+                <span class="project-status">Beta Release</span>
+              </div>
+              <h3 class="project-title">Task Manager Pro</h3>
+              <p class="project-description">
+                Advanced task management Flutter application with team
+                collaboration, time tracking, and productivity analytics
+                features.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Firebase</span>
+                <span class="tech-tag">Cloud Functions</span>
+                <span class="tech-tag">Push Notifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-cta" data-aos="fade-up" data-aos-delay="800">
+          <p>Want to see more of my work?</p>
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-rocket"></i>
+            Let's Work Together
+          </a>
+          <a href="./pages/all-projects.html" class="btn btn-outline">
+            <i class="fas fa-folder-open"></i>
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates Section Preview -->
+    <section id="templates" class="templates">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Reusable Solutions</span>
+          <h2 class="section-title">Project Templates</h2>
+          <p class="section-description">
+            Ready-to-use templates and boilerplates for rapid development
+          </p>
+        </div>
+        <div class="templates-preview">
+          <p class="templates-count" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-code"></i>
+            <span id="templates-count">4+</span> Professional Templates
+            Available
+          </p>
+          <div class="templates-cta" data-aos="fade-up" data-aos-delay="200">
+            <a href="./pages/templates.html" class="btn btn-primary">
+              <i class="fas fa-download"></i>
+              Browse Templates
+            </a>
+            <p class="templates-description">
+              Explore our collection of professional templates for React,
+              Flutter, WordPress, and more
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/mjvnbpkw" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Get in touch</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-description">
+            Have a project in mind? Let's discuss how we can bring your ideas to
+            life.
+          </p>
         </div>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Accra, Ghana</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:richardvidzrakou98@gmail.com"
+                  >richardvidzrakou98@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <a href="tel:+233505631264">+233 505 631 264</a>
+              </div>
+            </div>
+            <div class="availability-status">
+              <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span>Available for freelance projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form" data-aos="fade-left">
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mjvnbpkw"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="budget">Project Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select Budget Range</option>
+                  <option value="<$1000">Less than $1,000</option>
+                  <option value="$1000-$5000">$1,000 - $5,000</option>
+                  <option value="$5000-$10000">$5,000 - $10,000</option>
+                  <option value=">$10000">More than $10,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Richard Vidzrakou. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/richardvidvidzrakou98" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/RichardVid36291" target="_blank"><i class="fab fa-twitter"></i></a>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-text">RV</span>
             </div>
+            <p class="footer-description">
+              Crafting exceptional digital experiences with passion and
+              precision.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/richardvidvidzrakou98"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://x.com/RichardVid36291"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="./pages/blog.html" target="_blank" aria-label="Blog">
+                <i class="fas fa-blog"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="#web-development">Web Development</a></li>
+              <li><a href="#mobile-development">Mobile Development</a></li>
+              <li>
+                <a href="#wordpress-development">WordPress Development</a>
+              </li>
+              <li><a href="#consulting">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul class="footer-links">
+              <li><a href="./pages/blog.html">Blog</a></li>
+              <li><a href="#templates">Templates</a></li>
+              <li><a href="./pages/presentations.html">Presentations</a></li>
+              <li><a href="./my_cv.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Richard Vidzrakou. All rights reserved.</p>
+          <p>
+            Designed and developed with <i class="fas fa-heart"></i> in Ghana
+          </p>
+        </div>
+      </div>
     </footer>
 
-    <!-- Popups -->
-    <div class="popup" id="hirePopup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h2>Contact Information</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
-            <p><i class="fas fa-envelope"></i> 
-            <a href="mailto:richardvidzrakou98@gmail.com">richardvidzrakou98@gmail.com</a>
-            </p>
-            <p><i class="fas fa-phone"></i> 
-            <a href="tel:+233505631264">+233 505 631 264</a>
-            </p>
-            
-
+    <!-- Modals -->
+    <div id="about-modal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('about-modal')"
+          >&times;</span
+        >
+        <h2>About Richard Vidzrakou</h2>
+        <div class="modal-body">
+          <p>
+            I am a seasoned software engineer with expertise in React, Flutter,
+            PHP, WordPress, and JavaScript, specializing in building innovative
+            solutions and collaborating on diverse projects.
+          </p>
+          <p>
+            With a BSc in Information Technology from the University of Energy
+            and Natural Resources, I am committed to staying at the forefront of
+            technology. My passion lies in creating scalable, user-friendly
+            applications and leveraging the latest technologies to solve
+            real-world problems.
+          </p>
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <i class="fas fa-trophy"></i>
+              <span>5+ Years Professional Experience</span>
+            </div>
+            <div class="achievement-item">
+              <i class="fas fa-project-diagram"></i>
+              <span>50+ Successful Projects</span>
+            </div>
+            <div class="achievement-item">
+              <i class="fas fa-users"></i>
+              <span>98% Client Satisfaction Rate</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="popup" id="myWorksPopup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closeMyWorksPopup()">&times;</span>
-            <h2>About Me</h2>
-            <p>
-                I am a seasoned software engineer with expertise in React, Flutter, PHP, WordPress, and JavaScript, 
-                specializing in building innovative 
-                solutions and collaborating on diverse projects. With a BSc in Information Technology from the
-                 University of Energy and Natural Resources, I am committed to staying at the forefront of technology. 
-                 My passion lies in creating scalable, user-friendly applications and leveraging the latest technologies
-                  to solve real-world problems.
-            </p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/templates.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/analytics.js"></script>
+  </body>
 </html>

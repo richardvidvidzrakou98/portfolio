@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentations - Richard Vidzrakou</title>
+    <meta
+      name="description"
+      content="View Richard Vidzrakou's technical presentations, talks, and slides on software development topics."
+    />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+
+    <style>
+      /* Presentations specific styles */
+      .presentations-hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-black) 0%,
+          var(--dark-gray) 100%
+        );
+        color: var(--primary-white);
+        padding: 120px 0 80px;
+        text-align: center;
+      }
+
+      .presentation-card {
+        background: var(--primary-white);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition-medium);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .presentation-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-xl);
+      }
+
+      .presentation-thumbnail {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        background: var(--light-gray);
+      }
+
+      .presentation-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .presentation-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(10, 10, 10, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: var(--transition-medium);
+      }
+
+      .presentation-card:hover .presentation-overlay {
+        opacity: 1;
+      }
+
+      .presentation-actions {
+        display: flex;
+        gap: var(--spacing-md);
+      }
+
+      .presentation-content {
+        padding: var(--spacing-xl);
+      }
+
+      .presentation-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--spacing-sm);
+        font-size: 0.875rem;
+        color: var(--text-gray);
+      }
+
+      .presentation-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+        color: var(--primary-black);
+      }
+
+      .presentation-description {
+        color: var(--text-gray);
+        line-height: 1.6;
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .presentation-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .tag {
+        background: var(--orange-bg);
+        color: var(--primary-orange);
+        padding: 4px var(--spacing-sm);
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .presentation-stats {
+        display: flex;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        font-size: 0.875rem;
+        color: var(--text-gray);
+      }
+
+      .stat {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-xs);
+      }
+
+      .upload-section {
+        background: var(--light-gray);
+        padding: var(--spacing-xxl) 0;
+      }
+
+      .upload-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .upload-area {
+        border: 2px dashed var(--primary-orange);
+        border-radius: var(--radius-xl);
+        padding: var(--spacing-xxl);
+        background: var(--primary-white);
+        transition: var(--transition-medium);
+        cursor: pointer;
+      }
+
+      .upload-area:hover {
+        background: var(--orange-bg);
+        border-color: var(--orange-dark);
+      }
+
+      .upload-area.drag-over {
+        background: var(--orange-bg);
+        border-color: var(--orange-dark);
+        transform: scale(1.02);
+      }
+
+      .slide-viewer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-black);
+        z-index: 10000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide-viewer.active {
+        display: flex;
+      }
+
+      .slide-container {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        background: var(--primary-white);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .slide-content {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xl);
+      }
+
+      .slide-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: var(--spacing-md);
+        background: rgba(10, 10, 10, 0.8);
+        padding: var(--spacing-sm);
+        border-radius: 25px;
+      }
+
+      .slide-nav {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: var(--primary-orange);
+        color: var(--primary-white);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-fast);
+      }
+
+      .slide-nav:hover {
+        background: var(--orange-light);
+        transform: scale(1.1);
+      }
+
+      .slide-nav:disabled {
+        background: var(--text-gray);
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .slide-counter {
+        color: var(--primary-white);
+        padding: var(--spacing-sm);
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .close-viewer {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background: rgba(255, 107, 53, 0.9);
+        color: var(--primary-white);
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.25rem;
+        transition: var(--transition-fast);
+      }
+
+      .close-viewer:hover {
+        background: var(--primary-orange);
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .presentations-hero {
+          padding: 100px 0 60px;
+        }
+
+        .presentation-thumbnail {
+          height: 200px;
+        }
+
+        .presentation-actions {
+          flex-direction: column;
+        }
+
+        .slide-content {
+          height: 60vh;
+          padding: var(--spacing-md);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="../index.html">
+            <span class="logo-text">RV</span>
+          </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="./presentations.html" class="nav-link active"
+              >Presentations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="presentations-hero">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+          <h1>Technical Presentations</h1>
+          <p class="hero-description">
+            Explore my collection of technical talks, presentations, and slides
+            on various software development topics. From React best practices to
+            Flutter development and modern web technologies.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Presentations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Attendees</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Topics Covered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentations Grid -->
+    <section class="presentations-content">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">My Talks</span>
+          <h2 class="section-title">Featured Presentations</h2>
+        </div>
+
+        <div class="presentations-grid">
+          <!-- Presentation 1 -->
+          <div
+            class="presentation-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="presentation-thumbnail">
+              <img
+                src="../images/presentation-react.jpg"
+                alt="React Best Practices"
+                onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #ff6b35, #ff8c42)';"
+              />
+              <div class="presentation-overlay">
+                <div class="presentation-actions">
+                  <button
+                    class="btn btn-primary"
+                    onclick="openSlideViewer('react-best-practices')"
+                  >
+                    <i class="fas fa-play"></i>
+                    View Slides
+                  </button>
+                  <button class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="presentation-content">
+              <div class="presentation-meta">
+                <span class="date">January 15, 2025</span>
+                <span class="duration">45 minutes</span>
+              </div>
+              <h3 class="presentation-title">
+                React Best Practices & Performance Optimization
+              </h3>
+              <p class="presentation-description">
+                Deep dive into React best practices, performance optimization
+                techniques, and common pitfalls to avoid. Includes practical
+                examples and code demonstrations.
+              </p>
+              <div class="presentation-tags">
+                <span class="tag">React</span>
+                <span class="tag">Performance</span>
+                <span class="tag">Best Practices</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="presentation-stats">
+                <div class="stat">
+                  <i class="fas fa-eye"></i>
+                  <span>245 views</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>89 downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span>Dev Meetup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Presentation 2 -->
+          <div
+            class="presentation-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="presentation-thumbnail">
+              <img
+                src="../images/presentation-flutter.jpg"
+                alt="Flutter Development"
+                onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #42a5f5, #1976d2)';"
+              />
+              <div class="presentation-overlay">
+                <div class="presentation-actions">
+                  <button
+                    class="btn btn-primary"
+                    onclick="openSlideViewer('flutter-mobile-dev')"
+                  >
+                    <i class="fas fa-play"></i>
+                    View Slides
+                  </button>
+                  <button class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="presentation-content">
+              <div class="presentation-meta">
+                <span class="date">December 10, 2024</span>
+                <span class="duration">60 minutes</span>
+              </div>
+              <h3 class="presentation-title">
+                Flutter for Cross-Platform Mobile Development
+              </h3>
+              <p class="presentation-description">
+                Comprehensive guide to Flutter development, from setup to
+                deployment. Covers widgets, state management, and integrating
+                with native features.
+              </p>
+              <div class="presentation-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Mobile Development</span>
+                <span class="tag">Cross-Platform</span>
+              </div>
+              <div class="presentation-stats">
+                <div class="stat">
+                  <i class="fas fa-eye"></i>
+                  <span>312 views</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>134 downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span>Tech Conference</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Presentation 3 -->
+          <div
+            class="presentation-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="presentation-thumbnail">
+              <img
+                src="../images/presentation-nodejs.jpg"
+                alt="Node.js Backend"
+                onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #66bb6a, #43a047)';"
+              />
+              <div class="presentation-overlay">
+                <div class="presentation-actions">
+                  <button
+                    class="btn btn-primary"
+                    onclick="openSlideViewer('nodejs-backend')"
+                  >
+                    <i class="fas fa-play"></i>
+                    View Slides
+                  </button>
+                  <button class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="presentation-content">
+              <div class="presentation-meta">
+                <span class="date">November 22, 2024</span>
+                <span class="duration">50 minutes</span>
+              </div>
+              <h3 class="presentation-title">
+                Building Scalable APIs with Node.js
+              </h3>
+              <p class="presentation-description">
+                Learn how to build robust, scalable APIs using Node.js and
+                Express. Covers authentication, database integration, and
+                deployment strategies.
+              </p>
+              <div class="presentation-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">API Development</span>
+                <span class="tag">Backend</span>
+              </div>
+              <div class="presentation-stats">
+                <div class="stat">
+                  <i class="fas fa-eye"></i>
+                  <span>198 views</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>67 downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span>University Talk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <div class="container">
+        <div class="upload-container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">Share Knowledge</span>
+            <h2 class="section-title">Upload Your Presentation</h2>
+            <p class="section-description">
+              Have a great presentation to share? Upload your slides and
+              contribute to the developer community.
+            </p>
+          </div>
+
+          <div
+            class="upload-area"
+            id="presentation-upload"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="upload-content">
+              <i class="fas fa-presentation"></i>
+              <h4>Upload Presentation</h4>
+              <p>
+                Drag and drop your presentation files here or click to browse
+              </p>
+              <p class="upload-formats">Supported formats: PDF, PPTX, KEY</p>
+              <button class="btn btn-primary">Choose Files</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide Viewer Modal -->
+    <div class="slide-viewer" id="slide-viewer">
+      <div class="slide-container">
+        <button class="close-viewer" onclick="closeSlideViewer()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="slide-content" id="slide-content">
+          <!-- Slide content will be dynamically loaded here -->
+        </div>
+        <div class="slide-controls">
+          <button class="slide-nav" id="prev-slide" onclick="previousSlide()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">1</span>
+          </span>
+          <button class="slide-nav" id="next-slide" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-text">RV</span>
+            </div>
+            <p class="footer-description">
+              Sharing knowledge through technical presentations and talks.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/richardvidvidzrakou98"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://x.com/RichardVid36291"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#projects">Projects</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Presentations</h4>
+            <ul class="footer-links">
+              <li><a href="#react-best-practices">React Best Practices</a></li>
+              <li><a href="#flutter-mobile-dev">Flutter Development</a></li>
+              <li><a href="#nodejs-backend">Node.js APIs</a></li>
+              <li><a href="#upload">Upload Presentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul class="footer-links">
+              <li><a href="../pages/blog.html">Blog</a></li>
+              <li><a href="../index.html#templates">Templates</a></li>
+              <li><a href="../my_cv.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Richard Vidzrakou. All rights reserved.</p>
+          <p>
+            Designed and developed with <i class="fas fa-heart"></i> in Ghana
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/presentations.js"></script>
+  </body>
+</html>

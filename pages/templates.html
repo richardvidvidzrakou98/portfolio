@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates - Richard Vidzrakou</title>
+    <meta
+      name="description"
+      content="Download professional templates for React, Flutter, WordPress, and more. Ready-to-use boilerplates by Richard Vidzrakou."
+    />
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="../index.html">
+            <span class="logo-text">RV</span>
+          </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="./templates.html" class="nav-link active">Templates</a>
+          </li>
+          <li class="nav-item">
+            <a href="./presentations.html" class="nav-link">Presentations</a>
+          </li>
+          <li class="nav-item">
+            <a href="../index.html#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button class="theme-toggle" id="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="header-content" data-aos="fade-up">
+          <h1 class="page-title">Project Templates</h1>
+          <p class="page-description">
+            Professional templates and boilerplates to accelerate your
+            development process
+          </p>
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="separator">/</span>
+            <span class="current">Templates</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="templates-page">
+      <div class="container">
+        <!-- Filter Controls -->
+        <div class="templates-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">
+            All Templates
+          </button>
+          <button class="filter-btn" data-filter="react">React</button>
+          <button class="filter-btn" data-filter="flutter">Flutter</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+          <button class="filter-btn" data-filter="node">Node.js</button>
+        </div>
+
+        <!-- Templates Grid -->
+        <div class="templates-grid">
+          <!-- React Dashboard Template -->
+          <div
+            class="template-card"
+            data-category="react"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/react-dashboard-preview.jpg"
+                alt="React Dashboard Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('react-dashboard')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('react-dashboard')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">React Admin Dashboard</h3>
+                <span class="template-price">Free</span>
+              </div>
+              <p class="template-description">
+                Modern React dashboard with authentication, routing, state
+                management, and beautiful UI components.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">React 18</span>
+                <span class="feature-tag">TypeScript</span>
+                <span class="feature-tag">Tailwind CSS</span>
+                <span class="feature-tag">React Router</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>1.2K Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.8/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flutter E-commerce Template -->
+          <div
+            class="template-card"
+            data-category="flutter"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/flutter-ecommerce-preview.jpg"
+                alt="Flutter E-commerce Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('flutter-ecommerce')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('flutter-ecommerce')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">Flutter E-commerce App</h3>
+                <span class="template-price">$29</span>
+              </div>
+              <p class="template-description">
+                Complete Flutter e-commerce application with payment
+                integration, cart functionality, and admin panel.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">Flutter 3.0</span>
+                <span class="feature-tag">Firebase</span>
+                <span class="feature-tag">Payment Gateway</span>
+                <span class="feature-tag">Admin Panel</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>856 Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.9/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WordPress Business Template -->
+          <div
+            class="template-card"
+            data-category="wordpress"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/wordpress-business-preview.jpg"
+                alt="WordPress Business Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('wordpress-business')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('wordpress-business')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">Business WordPress Theme</h3>
+                <span class="template-price">Free</span>
+              </div>
+              <p class="template-description">
+                Professional WordPress theme for business websites with custom
+                post types and Elementor support.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">WordPress 6.0</span>
+                <span class="feature-tag">Elementor</span>
+                <span class="feature-tag">WooCommerce</span>
+                <span class="feature-tag">Responsive</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>2.1K Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.7/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node.js REST API Template -->
+          <div
+            class="template-card"
+            data-category="node"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/nodejs-api-preview.jpg"
+                alt="Node.js REST API Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('nodejs-api')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('nodejs-api')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">Node.js REST API</h3>
+                <span class="template-price">Free</span>
+              </div>
+              <p class="template-description">
+                Production-ready Node.js REST API with authentication,
+                validation, and PostgreSQL integration.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">Express.js</span>
+                <span class="feature-tag">PostgreSQL</span>
+                <span class="feature-tag">JWT Auth</span>
+                <span class="feature-tag">Validation</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>1.5K Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.6/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio Template -->
+          <div
+            class="template-card"
+            data-category="react"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/portfolio-template-preview.jpg"
+                alt="Portfolio Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('portfolio-template')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('portfolio-template')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">Developer Portfolio</h3>
+                <span class="template-price">Free</span>
+              </div>
+              <p class="template-description">
+                Modern portfolio template for developers with project showcase,
+                skills section, and contact form.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">HTML5</span>
+                <span class="feature-tag">CSS3</span>
+                <span class="feature-tag">JavaScript</span>
+                <span class="feature-tag">Responsive</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>3.2K Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.8/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Landing Page Template -->
+          <div
+            class="template-card"
+            data-category="react"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="template-preview">
+              <img
+                src="../images/landing-page-preview.jpg"
+                alt="Landing Page Template"
+              />
+              <div class="template-overlay">
+                <div class="template-actions">
+                  <button
+                    class="btn btn-sm btn-primary"
+                    onclick="downloadTemplate('landing-page')"
+                  >
+                    <i class="fas fa-download"></i>
+                    Download
+                  </button>
+                  <button
+                    class="btn btn-sm btn-outline"
+                    onclick="previewTemplate('landing-page')"
+                  >
+                    <i class="fas fa-eye"></i>
+                    Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-header">
+                <h3 class="template-title">Product Landing Page</h3>
+                <span class="template-price">$19</span>
+              </div>
+              <p class="template-description">
+                High-converting landing page template with modern design and
+                conversion optimization features.
+              </p>
+              <div class="template-features">
+                <span class="feature-tag">React</span>
+                <span class="feature-tag">Styled Components</span>
+                <span class="feature-tag">Animations</span>
+                <span class="feature-tag">SEO Ready</span>
+              </div>
+              <div class="template-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>987 Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.9/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="templates-cta" data-aos="fade-up" data-aos-delay="700">
+          <div class="cta-content">
+            <h2>Need a Custom Template?</h2>
+            <p>
+              Let's build something amazing together. Contact me for custom
+              template development.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-text">RV</span>
+            </div>
+            <p class="footer-description">
+              Crafting exceptional digital experiences with passion and
+              precision.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html#home">Home</a></li>
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#projects">Projects</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Richard Vidzrakou. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/templates.js"></script>
+  </body>
+</html>
