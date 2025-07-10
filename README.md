@@ -1,6 +1,6 @@
 # Richard Vidzrakou - Professional Portfolio
 
-A modern, responsive portfolio website showcasing my work as a Senior Software Developer. Built with HTML5, CSS3, and JavaScript featuring a clean black, orange, and white design perfect for recruiters and potential clients.
+A modern, responsive portfolio website showcasing my work as a Software Developer. Built with HTML5, CSS3, and JavaScript featuring a clean black, orange, and white design perfect for recruiters and potential clients.
 
 🌐 **Live Demo**: [https://richardvidvidzrakou98.github.io/portfolio/](https://richardvidvidzrakou98.github.io/portfolio/)
 
@@ -56,38 +56,42 @@ Visit the live portfolio at: **[https://richardvidvidzrakou98.github.io/portfoli
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/richardvidvidzrakou98/portfolio.git
    cd portfolio
    ```
 
 2. **Open locally**
+
    ```bash
    # Simply open index.html in your browser, or use a local server:
-   
+
    # Using Python
    python -m http.server 8000
-   
+
    # Using Node.js
    npx http-server
-   
+
    # Using PHP
    php -S localhost:8000
    ```
 
 3. **Make changes**
+
    - Edit HTML in `index.html` or page files in `pages/`
    - Modify styles in `css/` directory
    - Update JavaScript in `js/` directory
    - Add images to `images/` directory
 
 4. **Deploy changes**
+
    ```bash
    git add .
    git commit -m "Your commit message"
    git push origin main
    ```
-   
+
    GitHub Actions will automatically deploy your changes to GitHub Pages!
 
 ## 📧 Email Configuration
