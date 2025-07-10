@@ -1,129 +1,94 @@
 # Richard Vidzrakou - Professional Portfolio
 
-A modern, professional portfolio website showcasing my work as a Senior Software Developer. Built with a clean black, orange, and white design that's perfect for recruiters and potential clients.
+A modern, responsive portfolio website showcasing my work as a Senior Software Developer. Built with HTML5, CSS3, and JavaScript featuring a clean black, orange, and white design perfect for recruiters and potential clients.
+
+🌐 **Live Demo**: [https://richardvidvidzrakou98.github.io/portfolio/](https://richardvidvidzrakou98.github.io/portfolio/)
 
 ## 🚀 Features
 
-- **Modern Design**: Clean, minimalistic design with professional color scheme
-- **Responsive Layout**: Optimized for all devices and screen sizes
-- **Project Showcase**: Filterable project gallery with detailed modals
-- **Template Library**: Downloadable templates and boilerplates
-- **Presentations**: Dedicated page for slides and talks
-- **Contact Form**: Integrated contact form with email notifications
-- **Backend API**: Node.js/Express backend for dynamic content management
-- **SEO Optimized**: Optimized for search engines and social sharing
+- **Modern Responsive Design**: Optimized for all devices and screen sizes
+- **Interactive Project Showcase**: Filterable project gallery with detailed modals
+- **Professional Templates**: Downloadable code templates and boilerplates
+- **Presentations Gallery**: Dedicated page for talks and presentations
+- **Dynamic Contact Form**: Integrated contact form with validation
+- **Smooth Animations**: CSS animations and scroll effects
+- **SEO Optimized**: Meta tags and semantic HTML structure
+- **GitHub Pages Deployment**: Automatic CI/CD deployment with GitHub Actions
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-- HTML5, CSS3, JavaScript (ES6+)
-- Font Awesome icons
-- AOS (Animate On Scroll) library
-- Responsive CSS Grid and Flexbox
-
-### Backend
-
-- Node.js with Express.js
-- Multer for file uploads
-- Nodemailer for email functionality
-- Rate limiting and security middleware
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Styling**: CSS Grid, Flexbox, CSS Variables
+- **Icons**: Font Awesome
+- **Animations**: CSS Animations, AOS (Animate On Scroll)
+- **Deployment**: GitHub Pages with GitHub Actions CI/CD
 
 ## 📁 Project Structure
 
 ```
 portfolio/
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── components.css
-│   │   └── animations.css
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── templates.js
-│   │   ├── projects.js
-│   │   └── animations.js
-│   ├── pages/
-│   │   └── presentations.html
-│   ├── assets/
-│   │   └── icons/
-│   └── images/
-├── backend/
-│   ├── server.js
-│   ├── routes/
-│   │   ├── templates.js
-│   │   ├── presentations.js
-│   │   └── contact.js
-│   ├── uploads/
-│   │   ├── templates/
-│   │   └── presentations/
-│   └── middleware/
+├── index.html                 # Main portfolio page
+├── css/
+│   ├── main.css              # Core styles and layout
+│   ├── components.css        # Component-specific styles
+│   └── animations.css        # Animation and transition styles
+├── js/
+│   ├── main.js              # Core JavaScript functionality
+│   ├── projects.js          # Project showcase logic
+│   ├── templates.js         # Template management
+│   └── animations.js        # Animation controls
+├── images/                   # Project images and assets
+├── pages/
+│   ├── all-projects.html    # Complete project gallery
+│   ├── templates.html       # Template library
+│   └── presentations.html   # Presentation gallery
+├── .github/workflows/
+│   └── deploy.yml          # GitHub Actions CI/CD
 └── README.md
 ```
 
 ## 🚀 Quick Start
 
-### Frontend (Static Hosting on GitHub Pages)
+### View Live Portfolio
+
+Visit the live portfolio at: **[https://richardvidvidzrakou98.github.io/portfolio/](https://richardvidvidzrakou98.github.io/portfolio/)**
+
+### Local Development
 
 1. **Clone the repository**
-
    ```bash
    git clone https://github.com/richardvidvidzrakou98/portfolio.git
    cd portfolio
    ```
 
-2. **Deploy to GitHub Pages**
-   - Push the code to your GitHub repository
-   - Go to Settings > Pages
-   - Select source as "Deploy from a branch"
-   - Choose "main" branch and "/ (root)" folder
-   - Your site will be available at `https://yourusername.github.io/portfolio`
-
-### Backend (Hosting on Render)
-
-1. **Install dependencies**
-
+2. **Open locally**
    ```bash
-   cd backend
-   npm install
+   # Simply open index.html in your browser, or use a local server:
+   
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js
+   npx http-server
+   
+   # Using PHP
+   php -S localhost:8000
    ```
 
-2. **Environment Setup**
+3. **Make changes**
+   - Edit HTML in `index.html` or page files in `pages/`
+   - Modify styles in `css/` directory
+   - Update JavaScript in `js/` directory
+   - Add images to `images/` directory
 
+4. **Deploy changes**
    ```bash
-   cp .env.example .env
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
    ```
-
-   Update the `.env` file with your configuration:
-
-   ```env
-   NODE_ENV=production
-   PORT=5000
-
-   # Email Configuration
-   EMAIL_HOST=smtp.gmail.com
-   EMAIL_PORT=587
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASS=your-app-password
-   EMAIL_FROM=your-email@gmail.com
-   EMAIL_TO=richardvidzrakou98@gmail.com
-   ```
-
-3. **Local Development**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Deploy to Render**
-   - Create a new Web Service on [Render](https://render.com)
-   - Connect your GitHub repository
-   - Set the following:
-     - **Build Command**: `cd backend && npm install`
-     - **Start Command**: `cd backend && npm start`
-     - **Environment**: Add all variables from your `.env` file
-   - Deploy!
+   
+   GitHub Actions will automatically deploy your changes to GitHub Pages!
 
 ## 📧 Email Configuration
 
