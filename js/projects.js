@@ -10,21 +10,21 @@ let projects = [
     id: "pi-dashboard",
     title: "PI Management Dashboard",
     description:
-      "A comprehensive management system and dashboard for managing Private Investigators with advanced analytics and reporting features.",
+      "Official page for private investigators to access and manage their cases and documentations. Built with Laravel featuring secure authentication, case management, and comprehensive documentation tools.",
     longDescription:
-      "This project is a complete web-based management system designed specifically for Private Investigation agencies. It features a modern dashboard with real-time analytics, case management, client tracking, and comprehensive reporting tools. The system includes role-based access control, secure document storage, and automated workflow management.",
+      "This project is a professional web-based management system designed specifically for Private Investigation agencies. Built with Laravel, it features a modern dashboard with secure authentication, case management, client tracking, and comprehensive documentation tools. The system includes role-based access control, secure document storage, and automated workflow management.",
     category: "web",
     featured: true,
-    technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL"],
+    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
     images: [
-      "./images/PI_Dashbord1.png",
+      "./images/pidashboard1.png",
       "./images/pi-dashboard-2.jpg",
       "./images/pi-dashboard-3.jpg",
     ],
     liveUrl: "https://doyeninstitute.edu.gh/verify/admin/login.php",
     githubUrl: "https://github.com/richardvidvidzrakou98/pi-dashboard",
     features: [
-      "Real-time analytics dashboard",
+      "Secure Laravel authentication",
       "Case management system",
       "Client tracking and communication",
       "Document management",
@@ -32,43 +32,78 @@ let projects = [
       "Automated reporting",
     ],
     challenges:
-      "The main challenge was creating a secure system that could handle sensitive investigation data while maintaining ease of use for non-technical users.",
+      "Creating a secure Laravel system that could handle sensitive investigation data while maintaining ease of use for non-technical users.",
     solution:
-      "Implemented a multi-layered security approach with encrypted data storage, secure authentication, and comprehensive audit trails.",
+      "Implemented Laravel's built-in security features with encrypted data storage, secure authentication, and comprehensive audit trails.",
     status: "completed",
     completedAt: "2024-11-01",
     client: "Doyen Institute",
     duration: "3 months",
   },
   {
-    id: "doyen-app",
-    title: "Doyen Institute App",
+    id: "bookafrica",
+    title: "BookAfrica Platform",
     description:
-      "A multifunctional Flutter application designed for security professionals and students with learning modules and certification tracking.",
+      "A comprehensive Next.js platform for booking hotels across Africa. Collaborative project featuring advanced search, booking management, payment integration, and user-friendly interface for travelers.",
     longDescription:
-      "A comprehensive mobile application built with Flutter for the Doyen Institute of Security Studies. The app serves as a learning management system for security professionals and students, featuring interactive courses, certification tracking, examination systems, and professional networking capabilities.",
-    category: "mobile",
+      "BookAfrica is a modern hotel booking platform built with Next.js, designed specifically for the African hospitality market. This collaborative project features advanced search capabilities, real-time availability checking, secure booking management, integrated payment systems, and a responsive user interface optimized for travelers across Africa.",
+    category: "web",
     featured: false,
-    technologies: ["Flutter", "Dart", "Firebase"],
+    technologies: ["Next.js", "React", "TypeScript", "Node.js"],
+    images: [
+      "./images/bookafrica1.png",
+      "./images/bookafrica2.png",
+      "./images/bookafrica-3.jpg",
+    ],
+    liveUrl: null,
+    githubUrl: "https://github.com/richardvidvidzrakou98/bookafrica",
+    features: [
+      "Advanced hotel search and filtering",
+      "Real-time availability checking",
+      "Secure booking management",
+      "Payment gateway integration",
+      "User review and rating system",
+      "Mobile-responsive design",
+      "Multi-language support",
+    ],
+    challenges:
+      "Building a scalable booking platform that can handle multiple hotels across different African countries with varying payment methods and currencies.",
+    solution:
+      "Implemented a microservices architecture with Next.js for optimal performance, integrated multiple payment gateways, and created a flexible currency conversion system.",
+    status: "in-progress",
+    completedAt: null,
+    client: "Collaborative Project",
+    duration: "Ongoing",
+  },
+  {
+    id: "doyen-app",
+    title: "Doyen Institute Platform",
+    description:
+      "A comprehensive web platform for security professionals and students with learning modules and certification tracking built with modern web technologies.",
+    longDescription:
+      "A comprehensive web application built with React for the Doyen Institute of Security Studies. The platform serves as a learning management system for security professionals and students, featuring interactive courses, certification tracking, examination systems, and professional networking capabilities.",
+    category: "web",
+    featured: false,
+    technologies: ["React", "Node.js", "Firebase", "REST API"],
     images: [
       "./images/DoyenApp.png",
       "./images/doyen-app-2.jpg",
       "./images/doyen-app-3.jpg",
     ],
     liveUrl: null,
-    githubUrl: "https://github.com/richardvidvidzrakou98/doyen-app",
+    githubUrl: "https://github.com/richardvidvidzrakou98/doyen-platform",
     features: [
       "Interactive learning modules",
       "Certification tracking",
       "Online examinations",
       "Professional networking",
       "Progress analytics",
-      "Offline content access",
+      "Responsive web design",
     ],
     challenges:
-      "Creating an engaging mobile learning experience while ensuring content security and offline accessibility.",
+      "Creating an engaging web learning experience while ensuring content security and cross-device compatibility.",
     solution:
-      "Developed a progressive download system with encrypted local storage and interactive multimedia content delivery.",
+      "Developed a progressive web application with secure content delivery and responsive design for optimal user experience across devices.",
     status: "completed",
     completedAt: "2024-10-15",
     client: "Doyen Institute",
@@ -489,10 +524,10 @@ function renderProjects() {
 
 function showNotification(message, type) {
   // Simple notification system
-  const notification = document.createElement('div');
+  const notification = document.createElement("div");
   notification.className = `notification ${type}`;
   notification.textContent = message;
-  
+
   // Basic notification styles
   notification.style.cssText = `
     position: fixed;
@@ -504,11 +539,11 @@ function showNotification(message, type) {
     font-weight: 500;
     z-index: 10000;
     animation: slideIn 0.3s ease;
-    ${type === 'success' ? 'background: #10b981;' : 'background: #ef4444;'}
+    ${type === "success" ? "background: #10b981;" : "background: #ef4444;"}
   `;
-  
+
   document.body.appendChild(notification);
-  
+
   setTimeout(() => {
     notification.remove();
   }, 3000);
