@@ -725,6 +725,20 @@ a:hover {
     align-items: center;
   }
   
+  .status-indicator {
+    position: absolute;
+    bottom: -15px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 15px;
+  }
+  
+  .status-text {
+    display: none;
+  }
+  
   .btn {
     width: 100%;
     max-width: 280px;

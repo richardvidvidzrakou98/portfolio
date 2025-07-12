@@ -265,6 +265,23 @@ function setupProjectModals() {
 }
 
 function openProjectModal(projectId) {
+  // Check if modal is already open
+  const existingModal = document.getElementById(`project-modal-${projectId}`);
+  if (existingModal) {
+    return; // Modal is already open, don't create another one
+  }
+
+  // Close any other open modals first
+  const openModals = document.querySelectorAll(".modal.active");
+  openModals.forEach((modal) => {
+    modal.classList.remove("active");
+    setTimeout(() => {
+      if (modal.parentNode) {
+        modal.remove();
+      }
+    }, 300);
+  });
+
   const project = projects.find((p) => p.id === projectId);
   if (!project) {
     console.warn(`Project with ID ${projectId} not found`);
@@ -464,12 +481,22 @@ function createProjectModal(project) {
 
 function closeProjectModal(projectId) {
   const modal = document.getElementById(`project-modal-${projectId}`);
-  if (modal) {
+  if (modal && modal.classList.contains("active")) {
     modal.classList.remove("active");
     document.body.style.overflow = "";
 
+    // Remove event listeners to prevent memory leaks
+    const handleKeydown = (e) => {
+      if (e.key === "Escape") {
+        closeProjectModal(projectId);
+      }
+    };
+    document.removeEventListener("keydown", handleKeydown);
+
     setTimeout(() => {
-      modal.remove();
+      if (modal.parentNode) {
+        modal.remove();
+      }
     }, 300);
   }
 }
@@ -491,6 +518,14 @@ function setupModalInteractions(modal, project) {
   };
 
   document.addEventListener("keydown", handleKeydown);
+
+  // Prevent modal content clicks from closing the modal
+  const modalContent = modal.querySelector(".modal-content");
+  if (modalContent) {
+    modalContent.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
 }
 
 function changeMainImage(imageSrc, thumbnail) {
@@ -601,6 +636,15 @@ function formatDate(dateString) {
     day: "numeric",
   });
 }
+
+// ==========================================
+// MAKE FUNCTIONS GLOBALLY ACCESSIBLE
+// ==========================================
+
+// Make functions available globally for HTML onclick handlers
+window.openProjectModal = openProjectModal;
+window.closeProjectModal = closeProjectModal;
+window.filterProjectsWithAnimation = filterProjectsWithAnimation;
 
 // ==========================================
 // EXPORT FOR TESTING
