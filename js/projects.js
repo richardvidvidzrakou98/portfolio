@@ -4,179 +4,106 @@
    Admin features moved to separate admin dashboard
    ========================================== */
 
-// Projects data
+// Projects data - Auto-generated from admin dashboard
 let projects = [
   {
-    id: "pi-dashboard",
-    title: "PI Management Dashboard",
-    description:
-      "Official page for private investigators to access and manage their cases and documentations. Built with Laravel featuring secure authentication, case management, and comprehensive documentation tools.",
-    longDescription:
-      "This project is a professional web-based management system designed specifically for Private Investigation agencies. Built with Laravel, it features a modern dashboard with secure authentication, case management, client tracking, and comprehensive documentation tools. The system includes role-based access control, secure document storage, and automated workflow management.",
-    category: "web",
-    featured: true,
-    technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-    images: [
-      "./images/pidashboard1.png",
-      "./images/pi-dashboard-2.jpg",
-      "./images/pi-dashboard-3.jpg",
+    "id": "pidashboard",
+    "title": "PI Dashboard - Project Intelligence",
+    "description": "A comprehensive project management dashboard with real-time analytics and team collaboration features.",
+    "longDescription": "A comprehensive project management dashboard with real-time analytics and team collaboration features. Built with modern web technologies to provide intuitive project tracking, resource allocation, and performance monitoring.",
+    "category": "web-app",
+    "featured": true,
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Chart.js"
     ],
-    liveUrl: "https://doyeninstitute.edu.gh/verify/admin/login.php",
-    githubUrl: "https://github.com/richardvidvidzrakou98/pi-dashboard",
-    features: [
-      "Secure Laravel authentication",
-      "Case management system",
-      "Client tracking and communication",
-      "Document management",
-      "Role-based access control",
-      "Automated reporting",
+    "images": [
+      "./images/pidashboard-1.jpg",
+      "./images/pidashboard-2.jpg",
+      "./images/pidashboard-3.jpg"
     ],
-    challenges:
-      "Creating a secure Laravel system that could handle sensitive investigation data while maintaining ease of use for non-technical users.",
-    solution:
-      "Implemented Laravel's built-in security features with encrypted data storage, secure authentication, and comprehensive audit trails.",
-    status: "completed",
-    completedAt: "2024-11-01",
-    client: "Doyen Institute",
-    duration: "3 months",
+    "liveUrl": "https://pidashboard.demo.com",
+    "githubUrl": "https://github.com/richardvidvidzrakou98/pi-dashboard",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
+    ],
+    "challenges": "Project challenges and solutions will be detailed here.",
+    "solution": "Technical solution and implementation details.",
+    "status": "completed",
+    "completedAt": "2025-07-19T08:06:09.092Z",
+    "client": "Client Name",
+    "duration": "Project duration"
   },
   {
-    id: "bookafrica",
-    title: "BookAfrica Platform",
-    description:
-      "A comprehensive Next.js platform for booking hotels across Africa. Collaborative project featuring advanced search, booking management, payment integration, and user-friendly interface for travelers.",
-    longDescription:
-      "BookAfrica is a modern hotel booking platform built with Next.js, designed specifically for the African hospitality market. This collaborative project features advanced search capabilities, real-time availability checking, secure booking management, integrated payment systems, and a responsive user interface optimized for travelers across Africa.",
-    category: "web",
-    featured: false,
-    technologies: ["Next.js", "React", "TypeScript", "Node.js"],
-    images: [
-      "./images/bookafrica1.png",
-      "./images/bookafrica2.png",
-      "./images/bookafrica-3.jpg",
+    "id": "bookafrica",
+    "title": "BookAfrica - Literary Platform",
+    "description": "A digital platform connecting African authors with global readers through an innovative e-book marketplace.",
+    "longDescription": "A digital platform connecting African authors with global readers through an innovative e-book marketplace. Features include author profiles, book recommendations, reading analytics, and community features.",
+    "category": "e-commerce",
+    "featured": true,
+    "technologies": [
+      "Next.js",
+      "PostgreSQL",
+      "Stripe",
+      "AWS",
+      "Redis"
     ],
-    liveUrl: null,
-    githubUrl: "https://github.com/richardvidvidzrakou98/bookafrica",
-    features: [
-      "Advanced hotel search and filtering",
-      "Real-time availability checking",
-      "Secure booking management",
-      "Payment gateway integration",
-      "User review and rating system",
-      "Mobile-responsive design",
-      "Multi-language support",
+    "images": [
+      "./images/bookafrica-1.jpg",
+      "./images/bookafrica-2.jpg",
+      "./images/bookafrica-3.jpg"
     ],
-    challenges:
-      "Building a scalable booking platform that can handle multiple hotels across different African countries with varying payment methods and currencies.",
-    solution:
-      "Implemented a microservices architecture with Next.js for optimal performance, integrated multiple payment gateways, and created a flexible currency conversion system.",
-    status: "in-progress",
-    completedAt: null,
-    client: "Collaborative Project",
-    duration: "Ongoing",
+    "liveUrl": "https://bookafrica.demo.com",
+    "githubUrl": "https://github.com/richardvidvidzrakou98/bookafria",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
+    ],
+    "challenges": "Project challenges and solutions will be detailed here.",
+    "solution": "Technical solution and implementation details.",
+    "status": "completed",
+    "completedAt": "2025-07-19T08:06:09.092Z",
+    "client": "Client Name",
+    "duration": "Project duration"
   },
   {
-    id: "doyen-app",
-    title: "Doyen Institute Platform",
-    description:
-      "A comprehensive web platform for security professionals and students with learning modules and certification tracking built with modern web technologies.",
-    longDescription:
-      "A comprehensive web application built with React for the Doyen Institute of Security Studies. The platform serves as a learning management system for security professionals and students, featuring interactive courses, certification tracking, examination systems, and professional networking capabilities.",
-    category: "web",
-    featured: false,
-    technologies: ["React", "Node.js", "Firebase", "REST API"],
-    images: [
-      "./images/DoyenApp.png",
+    "id": "doyen-app",
+    "title": "Doyen App - Professional Network",
+    "description": "A networking platform for professionals to connect, collaborate, and share expertise across industries.",
+    "longDescription": "A networking platform for professionals to connect, collaborate, and share expertise across industries. Includes mentorship matching, skill assessments, and career development tools.",
+    "category": "social",
+    "featured": false,
+    "technologies": [
+      "React Native",
+      "Firebase",
+      "GraphQL",
+      "TypeScript"
+    ],
+    "images": [
+      "./images/doyen-app-1.jpg",
       "./images/doyen-app-2.jpg",
-      "./images/doyen-app-3.jpg",
+      "./images/doyen-app-3.jpg"
     ],
-    liveUrl: null,
-    githubUrl: "https://github.com/richardvidvidzrakou98/doyen-platform",
-    features: [
-      "Interactive learning modules",
-      "Certification tracking",
-      "Online examinations",
-      "Professional networking",
-      "Progress analytics",
-      "Responsive web design",
+    "liveUrl": "https://doyenapp.demo.com",
+    "githubUrl": "https://github.com/richardvidvidzrakou98/doyen-app",
+    "features": [
+      "Feature 1",
+      "Feature 2",
+      "Feature 3"
     ],
-    challenges:
-      "Creating an engaging web learning experience while ensuring content security and cross-device compatibility.",
-    solution:
-      "Developed a progressive web application with secure content delivery and responsive design for optimal user experience across devices.",
-    status: "completed",
-    completedAt: "2024-10-15",
-    client: "Doyen Institute",
-    duration: "4 months",
-  },
-  {
-    id: "globalee-solutions",
-    title: "Globalee Solutions",
-    description:
-      "A professional WordPress website for real estate services with custom themes and advanced property management features.",
-    longDescription:
-      "A complete real estate website solution built on WordPress with custom themes and advanced property management features. The site includes property listings, virtual tours, client management, and integrated payment systems for a seamless real estate experience.",
-    category: "wordpress",
-    featured: false,
-    technologies: ["WordPress", "PHP", "Custom Themes"],
-    images: [
-      "./images/iPad-Air-4-globaleesolutions.com.png",
-      "./images/globalee-2.jpg",
-      "./images/globalee-3.jpg",
-    ],
-    liveUrl: "https://globaleesolutions.com/",
-    githubUrl: null,
-    features: [
-      "Custom WordPress theme",
-      "Property management system",
-      "Virtual tour integration",
-      "Client portal",
-      "Payment gateway integration",
-      "SEO optimization",
-    ],
-    challenges:
-      "Creating a fast, SEO-friendly real estate website with complex property search and filtering capabilities.",
-    solution:
-      "Implemented custom post types, advanced caching strategies, and optimized database queries for performance.",
-    status: "completed",
-    completedAt: "2024-09-20",
-    client: "Globalee Solutions",
-    duration: "2 months",
-  },
-  {
-    id: "ecommerce-platform",
-    title: "E-commerce Platform",
-    description:
-      "A modern e-commerce platform built with React and Node.js featuring advanced product management and analytics.",
-    longDescription:
-      "A full-stack e-commerce solution built with React frontend and Node.js backend. Features include product catalog management, shopping cart, payment processing, order management, and comprehensive analytics dashboard for business insights.",
-    category: "web",
-    featured: true,
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    images: [
-      "./images/ecommerce-1.jpg",
-      "./images/ecommerce-2.jpg",
-      "./images/ecommerce-3.jpg",
-    ],
-    liveUrl: "https://ecommerce-demo.richardvidzrakou.com",
-    githubUrl: "https://github.com/richardvidvidzrakou98/ecommerce-platform",
-    features: [
-      "Product catalog management",
-      "Shopping cart functionality",
-      "Secure payment processing",
-      "Order management system",
-      "Analytics dashboard",
-      "Inventory management",
-    ],
-    challenges:
-      "Building a scalable e-commerce platform with real-time inventory updates and secure payment processing.",
-    solution:
-      "Implemented microservices architecture with real-time data synchronization and PCI-compliant payment processing.",
-    status: "in-progress",
-    completedAt: null,
-    client: "Personal Project",
-    duration: "Ongoing",
-  },
+    "challenges": "Project challenges and solutions will be detailed here.",
+    "solution": "Technical solution and implementation details.",
+    "status": "completed",
+    "completedAt": "2025-07-19T08:06:09.092Z",
+    "client": "Client Name",
+    "duration": "Project duration"
+  }
 ];
 
 // ==========================================
@@ -203,43 +130,36 @@ function setupProjectFiltering() {
   const projectCards = document.querySelectorAll(".project-card");
 
   filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.dataset.filter;
-
-      // Update active button
+    button.addEventListener("click", function () {
+      const filter = this.getAttribute("data-filter");
+      
+      // Update active filter button
       filterButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
+      this.classList.add("active");
 
       // Filter projects with animation
-      filterProjectsWithAnimation(projectCards, filter);
+      filterProjectsWithAnimation(filter);
     });
   });
 }
 
-function filterProjectsWithAnimation(cards, filter) {
-  // First, fade out all cards
-  cards.forEach((card) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(20px)";
-  });
-
-  setTimeout(() => {
-    cards.forEach((card, index) => {
-      const category = card.dataset.category;
-
-      if (filter === "all" || category === filter) {
-        card.style.display = "block";
-
-        // Stagger the fade-in animation
-        setTimeout(() => {
-          card.style.opacity = "1";
-          card.style.transform = "translateY(0)";
-        }, index * 100);
-      } else {
+function filterProjectsWithAnimation(filter) {
+  const projectCards = document.querySelectorAll(".project-card");
+  
+  projectCards.forEach((card) => {
+    const category = card.getAttribute("data-category");
+    const shouldShow = filter === "all" || category === filter;
+    
+    if (shouldShow) {
+      card.style.display = "block";
+      card.classList.add("fade-in");
+    } else {
+      card.classList.remove("fade-in");
+      setTimeout(() => {
         card.style.display = "none";
-      }
-    });
-  }, 200);
+      }, 300);
+    }
+  });
 }
 
 // ==========================================
@@ -247,21 +167,8 @@ function filterProjectsWithAnimation(cards, filter) {
 // ==========================================
 
 function setupProjectModals() {
-  // Add click listeners to project cards for modal opening
-  const projectCards = document.querySelectorAll(".project-card");
-
-  projectCards.forEach((card) => {
-    const projectId = card.dataset.projectId || extractProjectIdFromCard(card);
-    if (projectId) {
-      card.addEventListener("click", (e) => {
-        // Don't open modal if clicking on links
-        if (e.target.tagName === "A" || e.target.closest("a")) {
-          return;
-        }
-        openProjectModal(projectId);
-      });
-    }
-  });
+  // Project modals are created dynamically when opened
+  console.log("Project modals setup completed");
 }
 
 function openProjectModal(projectId) {
@@ -273,7 +180,7 @@ function openProjectModal(projectId) {
 
   // Close any other open modals first
   const openModals = document.querySelectorAll(".modal.active");
-  openModals.forEach((modal) => {
+  openModals.forEach(modal => {
     modal.classList.remove("active");
     setTimeout(() => {
       if (modal.parentNode) {
@@ -334,140 +241,93 @@ function createProjectModal(project) {
                     <div class="project-actions">
                         ${
                           project.liveUrl
-                            ? `
-                            <a href="${project.liveUrl}" target="_blank" class="btn btn-primary">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Demo
-                            </a>
-                        `
+                            ? `<a href="${project.liveUrl}" target="_blank" class="btn btn-primary">
+                                 <i class="fas fa-external-link-alt"></i> Live Demo
+                               </a>`
                             : ""
                         }
                         ${
                           project.githubUrl
-                            ? `
-                            <a href="${project.githubUrl}" target="_blank" class="btn btn-outline">
-                                <i class="fab fa-github"></i>
-                                View Code
-                            </a>
-                        `
+                            ? `<a href="${project.githubUrl}" target="_blank" class="btn btn-secondary">
+                                 <i class="fab fa-github"></i> Source Code
+                               </a>`
                             : ""
                         }
                     </div>
                 </div>
             </div>
             <div class="modal-body">
-                <div class="project-content">
-                    <div class="project-gallery">
-                        <div class="main-image">
-                            <img src="${project.images[0]}" alt="${
-    project.title
-  }" class="gallery-main">
-                        </div>
-                        ${
-                          project.images.length > 1
-                            ? `
-                            <div class="image-thumbnails">
-                                ${project.images
-                                  .map(
-                                    (img, index) => `
-                                    <img src="${img}" alt="${project.title} ${
-                                      index + 1
-                                    }" 
-                                         class="thumbnail ${
-                                           index === 0 ? "active" : ""
-                                         }"
-                                         onclick="changeMainImage('${img}', this)">
-                                `
-                                  )
-                                  .join("")}
-                            </div>
-                        `
-                            : ""
-                        }
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="${project.images[0]}" alt="${project.title}" class="main-image">
                     </div>
-                    <div class="project-details">
-                        <div class="project-overview">
-                            <h3>Project Overview</h3>
-                            <p class="project-description">${
-                              project.longDescription
-                            }</p>
+                    <div class="gallery-thumbnails">
+                        ${project.images
+                          .map(
+                            (img, index) => `
+                            <img src="${img}" alt="${project.title} ${index + 1}" 
+                                 class="thumbnail ${index === 0 ? "active" : ""}"
+                                 onclick="changeMainImage('${img}', this)">
+                        `
+                          )
+                          .join("")}
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <div class="project-description">
+                        <h3>About This Project</h3>
+                        <p>${project.longDescription}</p>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-stack">
+                            ${project.technologies
+                              .map(
+                                (tech) =>
+                                  `<span class="tech-badge">${tech}</span>`
+                              )
+                              .join("")}
                         </div>
-                        
-                        <div class="project-info-grid">
-                            <div class="info-section">
-                                <h4>Technologies Used</h4>
-                                <div class="tech-tags">
-                                    ${project.technologies
-                                      .map(
-                                        (tech) => `
-                                        <span class="tech-tag">${tech}</span>
-                                    `
-                                      )
-                                      .join("")}
-                                </div>
+                    </div>
+                    
+                    <div class="project-features">
+                        <h3>Key Features</h3>
+                        <ul class="features-list">
+                            ${project.features
+                              .map((feature) => `<li>${feature}</li>`)
+                              .join("")}
+                        </ul>
+                    </div>
+                    
+                    <div class="project-challenges">
+                        <h3>Challenges & Solutions</h3>
+                        <div class="challenge-solution">
+                            <div class="challenge">
+                                <h4>Challenge</h4>
+                                <p>${project.challenges}</p>
                             </div>
-                            
-                            <div class="info-section">
-                                <h4>Key Features</h4>
-                                <ul class="features-list">
-                                    ${project.features
-                                      .map(
-                                        (feature) => `
-                                        <li><i class="fas fa-check"></i> ${feature}</li>
-                                    `
-                                      )
-                                      .join("")}
-                                </ul>
+                            <div class="solution">
+                                <h4>Solution</h4>
+                                <p>${project.solution}</p>
                             </div>
-                            
-                            <div class="info-section">
-                                <h4>Project Details</h4>
-                                <div class="project-stats">
-                                    <div class="stat-item">
-                                        <span class="stat-label">Client:</span>
-                                        <span class="stat-value">${
-                                          project.client
-                                        }</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-label">Duration:</span>
-                                        <span class="stat-value">${
-                                          project.duration
-                                        }</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-label">Status:</span>
-                                        <span class="stat-value status-${
-                                          project.status
-                                        }">${project.status}</span>
-                                    </div>
-                                    ${
-                                      project.completedAt
-                                        ? `
-                                        <div class="stat-item">
-                                            <span class="stat-label">Completed:</span>
-                                            <span class="stat-value">${formatDate(
-                                              project.completedAt
-                                            )}</span>
-                                        </div>
-                                    `
-                                        : ""
-                                    }
-                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-info">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Client:</label>
+                                <span>${project.client}</span>
                             </div>
-                            
-                            <div class="info-section">
-                                <h4>Challenge & Solution</h4>
-                                <div class="challenge-solution">
-                                    <div class="challenge">
-                                        <h5><i class="fas fa-exclamation-triangle"></i> Challenge</h5>
-                                        <p>${project.challenges}</p>
-                                    </div>
-                                    <div class="solution">
-                                        <h5><i class="fas fa-lightbulb"></i> Solution</h5>
-                                        <p>${project.solution}</p>
-                                    </div>
-                                </div>
+                            <div class="info-item">
+                                <label>Duration:</label>
+                                <span>${project.duration}</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Completed:</label>
+                                <span>${formatDate(project.completedAt)}</span>
                             </div>
                         </div>
                     </div>
@@ -529,104 +389,20 @@ function setupModalInteractions(modal, project) {
 }
 
 function changeMainImage(imageSrc, thumbnail) {
-  const mainImage = document.querySelector(".gallery-main");
+  const mainImage = document.querySelector(".gallery-main img");
   const thumbnails = document.querySelectorAll(".thumbnail");
 
   if (mainImage) {
     mainImage.src = imageSrc;
   }
 
-  // Update active thumbnail
   thumbnails.forEach((thumb) => thumb.classList.remove("active"));
   thumbnail.classList.add("active");
 }
 
 // ==========================================
-// PROJECT ACTIONS (Client-side only)
-// ==========================================
-
-function setupProjectActions() {
-  // Only setup view-only actions for client side
-  // Admin actions moved to admin dashboard
-  console.log("Projects module loaded - client mode");
-}
-
-function renderProjects() {
-  // This function would be called by the backend
-  // For now, projects are statically loaded in HTML
-  console.log("Projects rendered from static data");
-}
-
-function showNotification(message, type) {
-  // Simple notification system
-  const notification = document.createElement("div");
-  notification.className = `notification ${type}`;
-  notification.textContent = message;
-
-  // Basic notification styles
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 24px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 500;
-    z-index: 10000;
-    animation: slideIn 0.3s ease;
-    ${type === "success" ? "background: #10b981;" : "background: #ef4444;"}
-  `;
-
-  document.body.appendChild(notification);
-
-  setTimeout(() => {
-    notification.remove();
-  }, 3000);
-}
-
-// ==========================================
-// STORAGE MANAGEMENT
-// ==========================================
-
-function saveProjectsToStorage() {
-  localStorage.setItem("portfolio_projects", JSON.stringify(projects));
-}
-
-function loadProjectsFromStorage() {
-  const storedProjects = localStorage.getItem("portfolio_projects");
-  if (storedProjects) {
-    projects = JSON.parse(storedProjects);
-  }
-}
-
-// ==========================================
 // UTILITY FUNCTIONS
 // ==========================================
-
-function generateProjectId() {
-  return (
-    "project_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9)
-  );
-}
-
-function extractProjectIdFromCard(card) {
-  // Try to extract project ID from various sources
-  const title = card.querySelector(".project-title, h3");
-  if (title) {
-    const titleText = title.textContent.toLowerCase();
-    if (
-      titleText.includes("pi management") ||
-      titleText.includes("dashboard")
-    ) {
-      return "pi-dashboard";
-    } else if (titleText.includes("doyen")) {
-      return "doyen-app";
-    } else if (titleText.includes("globalee")) {
-      return "globalee-solutions";
-    }
-  }
-  return null;
-}
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -635,6 +411,30 @@ function formatDate(dateString) {
     month: "long",
     day: "numeric",
   });
+}
+
+function loadProjectsFromStorage() {
+  // Load projects from localStorage if available
+  const storedProjects = localStorage.getItem("portfolio_projects");
+  if (storedProjects) {
+    try {
+      const parsedProjects = JSON.parse(storedProjects);
+      if (Array.isArray(parsedProjects) && parsedProjects.length > 0) {
+        projects = parsedProjects;
+      }
+    } catch (error) {
+      console.error("Error parsing stored projects:", error);
+    }
+  }
+}
+
+function saveProjectsToStorage() {
+  localStorage.setItem("portfolio_projects", JSON.stringify(projects));
+}
+
+function setupProjectActions() {
+  // Setup any additional project actions
+  console.log("Project actions setup completed");
 }
 
 // ==========================================
@@ -656,6 +456,5 @@ if (typeof module !== "undefined" && module.exports) {
     openProjectModal,
     closeProjectModal,
     filterProjectsWithAnimation,
-    generateProjectId,
   };
 }
