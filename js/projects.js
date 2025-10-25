@@ -7,103 +7,109 @@
 // Projects data - Auto-generated from admin dashboard
 let projects = [
   {
-    "id": "pidashboard",
-    "title": "PI Dashboard - Project Intelligence",
-    "description": "A comprehensive project management dashboard with real-time analytics and team collaboration features.",
-    "longDescription": "A comprehensive project management dashboard with real-time analytics and team collaboration features. Built with modern web technologies to provide intuitive project tracking, resource allocation, and performance monitoring.",
-    "category": "web-app",
-    "featured": true,
-    "technologies": [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Socket.io",
-      "Chart.js"
-    ],
-    "images": [
+    id: "pidashboard",
+    title: "PI Dashboard - Project Intelligence",
+    description:
+      "A comprehensive project management dashboard with real-time analytics and team collaboration features.",
+    longDescription:
+      "A comprehensive project management dashboard with real-time analytics and team collaboration features. Built with modern web technologies to provide intuitive project tracking, resource allocation, and performance monitoring.",
+    category: "web-app",
+    featured: true,
+    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Chart.js"],
+    images: [
       "./images/pidashboard-1.jpg",
       "./images/pidashboard-2.jpg",
-      "./images/pidashboard-3.jpg"
+      "./images/pidashboard-3.jpg",
     ],
-    "liveUrl": "https://pidashboard.demo.com",
-    "githubUrl": "https://github.com/richardvidvidzrakou98/pi-dashboard",
-    "features": [
-      "Feature 1",
-      "Feature 2",
-      "Feature 3"
-    ],
-    "challenges": "Project challenges and solutions will be detailed here.",
-    "solution": "Technical solution and implementation details.",
-    "status": "completed",
-    "completedAt": "2025-07-19T08:06:09.092Z",
-    "client": "Client Name",
-    "duration": "Project duration"
+    liveUrl: "https://pidashboard.demo.com",
+    githubUrl: "https://github.com/richardvidvidzrakou98/pi-dashboard",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+    challenges: "Project challenges and solutions will be detailed here.",
+    solution: "Technical solution and implementation details.",
+    status: "completed",
+    completedAt: "2025-07-19T08:06:09.092Z",
+    client: "Client Name",
+    duration: "Project duration",
   },
   {
-    "id": "bookafrica",
-    "title": "BookAfrica - Literary Platform",
-    "description": "A digital platform connecting African authors with global readers through an innovative e-book marketplace.",
-    "longDescription": "A digital platform connecting African authors with global readers through an innovative e-book marketplace. Features include author profiles, book recommendations, reading analytics, and community features.",
-    "category": "e-commerce",
-    "featured": true,
-    "technologies": [
-      "Next.js",
-      "PostgreSQL",
-      "Stripe",
-      "AWS",
-      "Redis"
-    ],
-    "images": [
+    id: "bookafrica",
+    title: "BookAfrica - Literary Platform",
+    description:
+      "A digital platform connecting African authors with global readers through an innovative e-book marketplace.",
+    longDescription:
+      "A digital platform connecting African authors with global readers through an innovative e-book marketplace. Features include author profiles, book recommendations, reading analytics, and community features.",
+    category: "e-commerce",
+    featured: true,
+    technologies: ["Next.js", "PostgreSQL", "Stripe", "AWS", "Redis"],
+    images: [
       "./images/bookafrica-1.jpg",
       "./images/bookafrica-2.jpg",
-      "./images/bookafrica-3.jpg"
+      "./images/bookafrica-3.jpg",
     ],
-    "liveUrl": "https://bookafrica.demo.com",
-    "githubUrl": "https://github.com/richardvidvidzrakou98/bookafria",
-    "features": [
-      "Feature 1",
-      "Feature 2",
-      "Feature 3"
-    ],
-    "challenges": "Project challenges and solutions will be detailed here.",
-    "solution": "Technical solution and implementation details.",
-    "status": "completed",
-    "completedAt": "2025-07-19T08:06:09.092Z",
-    "client": "Client Name",
-    "duration": "Project duration"
+    liveUrl: "https://bookafrica.net",
+    githubUrl: "https://github.com/richardvidvidzrakou98/bookafria",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+    challenges: "Project challenges and solutions will be detailed here.",
+    solution: "Technical solution and implementation details.",
+    status: "completed",
+    completedAt: "2025-07-19T08:06:09.092Z",
+    client: "Client Name",
+    duration: "Project duration",
   },
   {
-    "id": "doyen-app",
-    "title": "Doyen App - Professional Network",
-    "description": "A networking platform for professionals to connect, collaborate, and share expertise across industries.",
-    "longDescription": "A networking platform for professionals to connect, collaborate, and share expertise across industries. Includes mentorship matching, skill assessments, and career development tools.",
-    "category": "social",
-    "featured": false,
-    "technologies": [
-      "React Native",
-      "Firebase",
-      "GraphQL",
-      "TypeScript"
-    ],
-    "images": [
+    id: "doyen-app",
+    title: "Doyen App - Professional Network",
+    description:
+      "A networking platform for professionals to connect, collaborate, and share expertise across industries.",
+    longDescription:
+      "A networking platform for professionals to connect, collaborate, and share expertise across industries. Includes mentorship matching, skill assessments, and career development tools.",
+    category: "social",
+    featured: false,
+    technologies: ["React Native", "Firebase", "GraphQL", "TypeScript"],
+    images: [
       "./images/doyen-app-1.jpg",
       "./images/doyen-app-2.jpg",
-      "./images/doyen-app-3.jpg"
+      "./images/doyen-app-3.jpg",
     ],
-    "liveUrl": "https://doyenapp.demo.com",
-    "githubUrl": "https://github.com/richardvidvidzrakou98/doyen-app",
-    "features": [
-      "Feature 1",
-      "Feature 2",
-      "Feature 3"
+    liveUrl: "https://doyenapp.demo.com",
+    githubUrl: "https://github.com/richardvidvidzrakou98/doyen-app",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+    challenges: "Project challenges and solutions will be detailed here.",
+    solution: "Technical solution and implementation details.",
+    status: "completed",
+    completedAt: "2025-07-19T08:06:09.092Z",
+    client: "Client Name",
+    duration: "Project duration",
+  },
+  {
+    id: "case-management-system",
+    title: "Case Management System (CMS)",
+    description:
+      "Professional case management system built with Laravel and MySQL for managing investigation cases.",
+    longDescription:
+      "A comprehensive case management system developed with Laravel and MySQL for efficient handling of investigation cases. The system features secure authentication, case tracking, document management, and reporting capabilities. Hosted on Hostinger for reliable performance and accessibility.",
+    category: "web-app",
+    featured: true,
+    technologies: ["Laravel", "MySQL", "PHP", "Bootstrap", "jQuery"],
+    images: ["./images/CMS.png", "./images/cms-2.jpg", "./images/cms-3.jpg"],
+    liveUrl: "https://app.doyeninstitute.edu.gh/",
+    githubUrl: "",
+    features: [
+      "Secure user authentication and authorization",
+      "Comprehensive case tracking and management",
+      "Document upload and management system",
+      "Advanced search and filtering capabilities",
+      "Detailed reporting and analytics",
     ],
-    "challenges": "Project challenges and solutions will be detailed here.",
-    "solution": "Technical solution and implementation details.",
-    "status": "completed",
-    "completedAt": "2025-07-19T08:06:09.092Z",
-    "client": "Client Name",
-    "duration": "Project duration"
-  }
+    challenges:
+      "Building a secure and scalable case management system that handles sensitive investigation data while maintaining user-friendly interface and robust performance.",
+    solution:
+      "Implemented Laravel's built-in security features, created a modular architecture for easy maintenance, and optimized database queries for fast performance. Used secure file handling for document management and implemented role-based access control.",
+    status: "completed",
+    completedAt: "2025-10-20T08:00:00.000Z",
+    client: "Investigation Agency",
+    duration: "3 months",
+  },
 ];
 
 // ==========================================
@@ -132,7 +138,7 @@ function setupProjectFiltering() {
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const filter = this.getAttribute("data-filter");
-      
+
       // Update active filter button
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       this.classList.add("active");
@@ -145,11 +151,11 @@ function setupProjectFiltering() {
 
 function filterProjectsWithAnimation(filter) {
   const projectCards = document.querySelectorAll(".project-card");
-  
+
   projectCards.forEach((card) => {
     const category = card.getAttribute("data-category");
     const shouldShow = filter === "all" || category === filter;
-    
+
     if (shouldShow) {
       card.style.display = "block";
       card.classList.add("fade-in");
@@ -180,7 +186,7 @@ function openProjectModal(projectId) {
 
   // Close any other open modals first
   const openModals = document.querySelectorAll(".modal.active");
-  openModals.forEach(modal => {
+  openModals.forEach((modal) => {
     modal.classList.remove("active");
     setTimeout(() => {
       if (modal.parentNode) {
@@ -259,14 +265,20 @@ function createProjectModal(project) {
             <div class="modal-body">
                 <div class="project-gallery">
                     <div class="gallery-main">
-                        <img src="${project.images[0]}" alt="${project.title}" class="main-image">
+                        <img src="${project.images[0]}" alt="${
+    project.title
+  }" class="main-image">
                     </div>
                     <div class="gallery-thumbnails">
                         ${project.images
                           .map(
                             (img, index) => `
-                            <img src="${img}" alt="${project.title} ${index + 1}" 
-                                 class="thumbnail ${index === 0 ? "active" : ""}"
+                            <img src="${img}" alt="${project.title} ${
+                              index + 1
+                            }" 
+                                 class="thumbnail ${
+                                   index === 0 ? "active" : ""
+                                 }"
                                  onclick="changeMainImage('${img}', this)">
                         `
                           )
