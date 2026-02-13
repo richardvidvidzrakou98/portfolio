@@ -81,8 +81,9 @@ This project is configured to automatically deploy to GitHub Pages when changes 
 ### Alternative Deployment Options
 
 This project can also be deployed to:
+
 - Vercel
-- Netlify  
+- Netlify
 - Cloudflare Pages
 
 ## 📧 Contact
