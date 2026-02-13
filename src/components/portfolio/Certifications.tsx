@@ -8,23 +8,23 @@ const fade = {
 const certifications = [
   {
     title: "AWS Cloud Practitioner",
-    image: "/assets/certificates/cloud_practitioner_cert.jpeg",
+    image: "/portfolio/assets/certificates/cloud_practitioner_cert.jpeg",
   },
   {
     title: "AWS Compute Services",
-    image: "/assets/certificates/awscompute.png",
+    image: "/portfolio/assets/certificates/awscompute.png",
   },
   {
     title: "AWS Storage Services",
-    image: "/assets/certificates/awsstorage.png",
+    image: "/portfolio/assets/certificates/awsstorage.png",
   },
   {
     title: "AWS Database Services",
-    image: "/assets/certificates/awsdatabase.png",
+    image: "/portfolio/assets/certificates/awsdatabase.png",
   },
   {
     title: "AI Agent Conference",
-    image: "/assets/certificates/aiagentconf.png",
+    image: "/portfolio/assets/certificates/aiagentconf.png",
   },
 ];
 

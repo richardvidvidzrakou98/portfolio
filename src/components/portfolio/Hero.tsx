@@ -46,7 +46,7 @@ const Hero = () => (
             Contact
           </a>
           <a
-            href="/assets/Richard%20Vidzrakou_CV.pdf"
+            href="/portfolio/assets/Richard%20Vidzrakou_CV.pdf"
             className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors ml-1"
             download
           >
