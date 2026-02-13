@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
+# Richard Vidzrakou - Portfolio
 
-## Project info
+Personal portfolio website showcasing my work as a Software Engineer specializing in full-stack development, RESTful APIs, and cloud infrastructure.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Tech Stack
 
-## How can I edit this code?
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
 
-There are several ways of editing your application.
+## 🛠️ Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js (v18 or higher)
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone git@github.com:richardvidvidzrakou98/portfolio.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Build for Production
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production-ready files will be generated in the `dist` directory.
 
-## What technologies are used for this project?
+## 📄 Project Structure
 
-This project is built with:
+```
+src/
+├── components/
+│   ├── portfolio/
+│   │   ├── Hero.tsx
+│   │   ├── Projects.tsx
+│   │   ├── About.tsx
+│   │   ├── Skills.tsx
+│   │   ├── Certifications.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Contact.tsx
+│   │   └── Footer.tsx
+│   └── ui/              # shadcn/ui components
+├── pages/
+│   ├── Index.tsx
+│   └── NotFound.tsx
+├── lib/
+│   └── utils.ts
+└── hooks/
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
 
-## How can I deploy this project?
+## 🌐 Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch.
 
-## Can I connect a custom domain to my Lovable project?
+### GitHub Pages Setup
 
-Yes, you can!
+1. Go to your repository Settings → Pages
+2. Under "Build and deployment", select "GitHub Actions" as the source
+3. Push changes to the main branch - the site will automatically build and deploy
+4. Your site will be available at: `https://richardvidvidzrakou98.github.io/portfolio/`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Alternative Deployment Options
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project can also be deployed to:
+- Vercel
+- Netlify  
+- Cloudflare Pages
+
+## 📧 Contact
+
+- **Email**: richardvidzrakou98@gmail.com
+- **LinkedIn**: [Richard Vidzrakou](https://www.linkedin.com/in/richard-vidzrakou-53aa0422b/)
+- **GitHub**: [@richardvidvidzrakou98](https://github.com/richardvidvidzrakou98)
+- **X (Twitter)**: [@RichardVid36291](https://x.com/RichardVid36291)
+
+## 📝 License
+
+This project is open source and available for personal and educational purposes.
